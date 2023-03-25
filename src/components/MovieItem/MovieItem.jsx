@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const MovieItem = ({ movies }) => {
   const location = useLocation();
@@ -19,6 +20,10 @@ const MovieItem = ({ movies }) => {
       </ul>
     </div>
   );
+};
+
+MovieItem.propTypes = {
+  movies: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default MovieItem;
